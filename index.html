@@ -1,0 +1,297 @@
+<html lang="en">
+
+<head>
+    <!-- Setting meta information -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bomb Games</title>
+
+    <!-- Sets the stylesheet (styles.css) and the icon for the website (favicon.ico) -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Images and text will dynamically change size with size of screen and includes min sizes appropriate for
+desktop and mobile viewing. All images with attached link will open into a new tab. -->
+
+<body id="body">
+
+    <!-- SAWS AND CLOUDS -->
+    <!-- Creates the 3 saws which fall down screen using keyframe animation. Each saw falls
+    down at slightly different intervals due to the differing delays. -->
+    <IMG class="saw" style="min-height: 40px;" srcset="Images\saw.png 11000w" alt="saw_image ">
+    <IMG class="saw" style="min-height: 40px;margin-left: 80%;animation-delay: 3s;top:-80px;" srcset="Images\saw.png 11000w" alt="saw_image ">
+    <IMG class="saw" style="min-height: 40px;margin-left: 40%;animation-delay: 6s;top:-80px;" srcset="Images\saw.png 11000w" alt="saw_image ">
+
+    <!-- Creates 2 clouds which swing using keyframe animation. These clouds have a button which makes their
+    visibility change to hidden when clicked. -->
+    <button type="submit" onclick="cloudClicked()" style="background: transparent;border: none;font-size:0;">
+    <IMG class="cloud" style="min-height: 100px;margin-left: 80%;top: 200%;" srcset="Images\cloud1.png 5000w" alt="cloud1_image ">
+    </button>
+    <button type="submit" onclick="cloudClicked2()" style="background: transparent;border: none;font-size:0;">
+        <IMG class="cloud" style="min-height: 100px;top: 70%;" srcset="Images\cloud2.png 5000w" alt="cloud2_image ">
+    </button>
+
+    <!-- NAVIGATION BAR -->
+    <!-- Creates navbar for the top of the site. Each div (with class="subnav") is one element on the navbar,
+    each subdiv under the certain div (class="subnav-content") is the part that shows up when element is hovered over. -->
+    <div class="navbar" id="#nav">
+        <!-- Bomb logo which sends you to top of screen when clicked. Required different class than other
+        elements due to sizing issues. -->
+        <a class="two" href="#">
+            <IMG class="centered " id="navBomb" style="min-width: 40px" srcset="Images\logo_bomb3.png 11000w" alt="bomb_logo_image ">
+        </a>
+        <!-- "Games text which holds subnav content "Dodgy Balloon" & "Underdevelopment" which appears when hovered over.
+        Each subnav text takes you to the respective part of the site when clicked. -->
+        <div class="subnav ">
+            <button class="subnavbtn " style="font-size: clamp(1.5vw, 17px, 1000px);">Games <i class="fa fa-caret-down "></i></button>
+            <div class="subnav-content ">
+                <a class="one" href="#dodgy" style="font-size: clamp(1vw, 12px, 1000px);">Dodgy Balloon</a>
+                <a class="one" href="#dev" style="font-size: clamp(1vw, 12px, 1000px);">Under Development</a>
+            </div>
+        </div>
+        <!-- "About text which holds subnav content "About The Developer" which appears when hovered over.
+        The subnav text takes you to the respective part of the site when clicked. -->
+        <div class="subnav ">
+            <button class="subnavbtn " style="font-size: clamp(1.5vw, 17px, 1000px);">About <i class="fa fa-caret-down "></i></button>
+            <div class="subnav-content ">
+                <a class="one" href="#about" style="font-size: clamp(1vw, 12px, 1000px);">About The Developer</a>
+            </div>
+        </div>
+        <!-- "Support text which holds subnav content "Support" which appears when hovered over.
+        The subnav text takes you to the respective part of the site when clicked. -->
+        <div class="subnav ">
+            <button class="subnavbtn " style="font-size: clamp(1.5vw, 17px, 1000px);">Support <i class="fa fa-caret-down "></i></button>
+            <div class="subnav-content ">
+                <a class="one" href="#support" style="font-size: clamp(1vw, 12px, 1000px);">How To Support</a>
+            </div>
+        </div>
+        <!-- "Contact text which holds subnav content "Contact" which appears when hovered over.
+        The subnav text takes you to the respective part of the site when clicked. -->
+        <div class="subnav ">
+            <button class="subnavbtn " style="font-size: clamp(1.5vw, 17px, 1000px);">Contact <i class="fa fa-caret-down "></i></button>
+            <div class="subnav-content ">
+                <a class="one" href="#contact" style="font-size: clamp(1vw, 12px, 1000px);">How To Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Space div between navbar and bomb logo -->
+    <div style="visibility: hidden;">
+        <IMG class="centered " id="navBomb" style="min-width: 40px" ;<img srcset="Images\logo_bomb3.png 11000w" alt="spacer_image ">
+    </div>
+
+    <!-- BOMB LOGO -->
+    <div style="text-align: center;">
+        <img srcset="Images\logo_bomb_text.png 4000w" alt="bomb_logo_image ">
+    </div>
+    <br id="dodgy">
+
+    <!-- Small line seperating the segments on the site -->
+    <div style="height:1px;;width:100%;background-color: grey;"></div><br>
+
+    <!-- DODGY SECTION -->
+    <!-- Three images, one showing dodgy balloon picture, another with information, and last google play badge,
+    google play badge is clickable to new tab -->
+    <div class="dodgy-wrapper1">
+        <div class="slides">
+            <div class="container">
+                <img class="square" srcset="Images\dodgyballoon.jpg 1000w" alt="dodgy_image " style="min-width: 350px;">
+                <img class="square" srcset="Images\dodgy_text.jpg 1000w" alt="dodgy_text_image " style="min-width: 350px;">
+            </div>
+
+            <!-- Google play badge with link attached -->
+            <div style="text-align: center;padding-top: 30px;">
+                <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" style="text-decoration: none;text-align: center;">
+                    <img srcset="Images\badge.png 4000w " alt="badge_image " style="min-width: 100px;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Embeded trailer video for Dodgy Balloon -->
+    <div class="dodgy-wrapper2">
+        <div class="slides">
+            <div class="vid_hold">
+                <div>
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/aNrN7IzGJ0Q" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br id="dev">
+
+    <!-- Small line seperating the segments on the site -->
+    <div style="height:1px;;width:100%;background-color: grey;"></div>
+    <br>
+
+    <!-- UNDER DEVELOPMENT SECTION -->
+    <!-- Two images, under development text and picture underneath -->
+    <div class="dev-wrapper">
+        <div class="slides">
+            <IMG class="centered " <img srcset="Images\under_dev_text.png 1500w " alt="dev_text " style="min-width: 350px;">
+            <IMG class="centered " <img srcset="Images\question.jpg 2000w " alt="question.jpg " style="min-width: 300px;">
+            <br id="about">
+        </div>
+    </div>
+
+    <!-- Small line seperating the segments on the site -->
+    <div style="height:1px;;width:100%;background-color: grey;"></div>
+    <br>
+
+    <!-- ABOUT SECTION -->
+    <!-- Holds two images, One title text and one paragraph text -->
+    <div class="about-wrapper1">
+        <div class="slides">
+            <IMG class="centered " <img srcset="Images\about_dev_text.png 1500w " alt="dev_text_image " style="min-width: 350px;">
+            <IMG class="centered " <img srcset="Images\text_hire.png 1700w " alt="hire_text_image " style="min-width: 300px;">
+        </div>
+    </div>
+    <br>
+
+    <!-- Holds Two clickable images, one LinkedIn image and one Github image -->
+    <div class="about-wrapper2">
+        <div class="slides">
+            <div style="text-align: center;">
+                <a href="https://www.linkedin.com/in/adam-dodson-0373a81b6/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
+                    <img srcset="Images\linked_logo.png 3000w " alt="linked_logo_image " style="display: inline-block;min-width: 150px;">
+                </a>
+                <a href="https://github.com/adamdodson0" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
+                    <img srcset="Images\github_logo.png 3000w " alt="github_logo_image " style="display: inline-block;min-width: 150px;">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small line seperating the segments on the site -->
+    <br id="support">
+    <div style="height:1px;;width:100%;background-color: grey;"></div>
+    <br>
+
+    <!-- SUPPORT SECTION -->
+    <!-- Holds two images, one title text and one support text image -->
+    <div class="support-wrapper1">
+        <div class="slides">
+            <IMG class="centered " <img srcset="Images\support_text.png 1500w " alt="support_title_image " style="min-width: 350px;">
+            <IMG class="centered " <img srcset="Images\text_supp_how.png 2000w " alt="support_text_image " style="min-width: 300px;">
+        </div>
+    </div>
+    <br>
+
+    <!-- Holds four images, All to different social media with clickable links to new tabs. Images in 2 x 2 shape centered -->
+    <div class="support-wrapper2">
+        <div class="slides">
+            <div style="text-align: center;">
+                <a href="https://www.youtube.com/channel/UCBWUrn5nX2lDsAAGeaCddzg" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
+                    <img srcset="Images\youtube_logo.png 3000w " alt="youtube_logo_image " style="display: inline-block;min-width: 150px;">
+                </a>
+                <a href="https://twitter.com/DodgyBalloon" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
+                    <img srcset="Images\twitter_logo.png 3000w " alt="twitter_logo_image " style="display: inline-block;min-width: 150px;">
+                </a>
+                <br>
+                <br>
+                <a href="https://www.facebook.com/Dodgy-Balloon-101919632410554/?ref=pages_you_manage" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
+                    <img srcset="Images\facebook_logo.png 3000w " alt="facebook_logo_image " style="display: inline-block;min-width: 150px;">
+                </a>
+                <a href="https://www.instagram.com/dodgyballoon/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
+                    <img srcset="Images\instagram_logo.png 3000w " alt="instagram_logo_image " style="display: inline-block;min-width: 150px;">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small line seperating the segments on the site -->
+    <br id="contact">
+    <div style="height:1px;;width:100%;background-color: grey; "></div>
+    <br>
+
+    <!-- CONTACT SECTION -->
+    <!-- Holds two images, one title image, another image with email text -->
+    <div class="contact-wrapper">
+        <div class="slides">
+            <IMG class="centered " <img srcset="Images\contact_text.png 1500w " alt="contact_title_image " style="min-width: 350px;">
+            <IMG class="centered " <img srcset="Images\contact_me.png 2000w " alt="contact_text_image " style="min-width: 300px;">
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Footer of page -->
+    <div class="container_footer" style="overflow: auto; bottom: 0;"></div>
+</body>
+
+<!-- Javascript for listening events on site. Listening events include scrolling behavior
+as well as clicks and position on page. -->
+<script>
+    // Hides cloud off screen when clicked
+    function cloudClicked() {
+        document.getElementsByClassName("cloud")[0].style.top = -100;
+    }
+
+    // Hides cloud off screen when clicked
+    function cloudClicked2() {
+        document.getElementsByClassName("cloud")[1].style.top = -100;
+    }
+
+    var lastScrollTop; // Stores the top position
+
+    // Gets the navbar
+    navbar = document.getElementsByClassName('navbar');
+
+    // Detects scrolling and based on scrolling up or down will hide the navbar and transition the nav bar on screen
+    //  Will be called on every scroll
+    window.addEventListener('scroll', function() {
+
+        // Gets the location on scroll
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Hides navbar if scroll direction is down and user is not at top of page
+        // Else will reveal navbar
+        if (scrollTop > lastScrollTop && !window.scrollY == 0) { //if it will be greater than the previous
+            document.getElementsByClassName("navbar")[0].style.top = -(document.getElementById("navBomb").height * 2) - 5;;
+        } else {
+            document.getElementsByClassName("navbar")[0].style.top = "0px ";
+        }
+
+        // Stores new position
+        lastScrollTop = scrollTop;
+    });
+
+    // Configures the range of the trigger for the slide animations for the images in view
+    let options = {
+        root: document.querySelector('#scrollArea'),
+        rootMargin: '0px',
+        threshold: .25
+    }
+
+    // Loads the pages images first, then listens for animation slides to be in view
+    window.addEventListener("load", (event) => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const square = entry.target.querySelector('.slides');
+
+                // If in view, perform entry animation for images
+                if (entry.isIntersecting) {
+                    square.classList.add('slides_active');
+                    return; // if we added the class, exit the function
+                }
+
+                // When taken out of view, remove animation
+                square.classList.remove('slides_active');
+            });
+        }, options);
+
+        // Individual calls for each animation to occur to each div
+        observer.observe(document.querySelector('.dodgy-wrapper1'));
+        observer.observe(document.querySelector('.dodgy-wrapper2'));
+        observer.observe(document.querySelector('.dev-wrapper'));
+        observer.observe(document.querySelector('.about-wrapper1'));
+        observer.observe(document.querySelector('.about-wrapper2'));
+        observer.observe(document.querySelector('.support-wrapper1'));
+        observer.observe(document.querySelector('.support-wrapper2'));
+        observer.observe(document.querySelector('.contact-wrapper'));
+    }, false);
+</script>
