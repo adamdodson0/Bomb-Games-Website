@@ -1,5 +1,5 @@
-# Website - Dodgyballoon - Current Link:
-https://play.google.com/store/apps/details?id=com.grid.fun
+# Website - Bomb Games - Current Link:
+https://bombgames.app
 
 ## This simple website is built with HTML, CSS, and JavaScript.
 
