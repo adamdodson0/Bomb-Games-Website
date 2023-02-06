@@ -10,10 +10,44 @@
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
 </head>
 
-<!-- Images and text will dynamically change size with size of screen and includes min sizes appropriate for
-desktop and mobile viewing. All images with attached link will open into a new tab. -->
+<body>
+    <header>
+        <div id="brand">
+            <a href="https://bombgames.app/">
 
-<body id="body">
+
+                <img src="Images\logo_bomb_text.png" srcset="Images\logo_bomb_text.png 12000w" sizes="(min-width: 650px) 80vw" alt="Image description">
+
+
+
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a id="dodgy_scale" href="#dodgy-balloon">Dodgy Balloon</a></li>
+                <p> &nbsp&nbsp&nbsp|</p>
+                <li><a id="green_scale" href="#green-connect">Green Connect</a></li>
+                <p> &nbsp&nbsp&nbsp|</p>
+                <li><a id="about_scale" href="#about-me">About Me</a></li>
+                <p> &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                <a id="signup" href="#contact-me">Contact Me</a>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a style="color:black" href="#dodgy-balloon">Dodgy Balloon</a></li>
+                <li><a style="color:black" href="#green-connect">Green Connect</a></li>
+                <li><a style="color:black" href="#about-me">About Me</a></li>
+                <a style="color:black;" id="signup2" href="#contact-me">Contact Me </a>
+            </ul>
+        </div>
+    </header>
+    <script src="index.js"></script>
+
 
     <!-- SAWS AND CLOUDS -->
     <!-- Creates the 3 saws which fall down screen using keyframe animation. Each saw falls
@@ -25,273 +59,178 @@ desktop and mobile viewing. All images with attached link will open into a new t
     <!-- Creates 2 clouds which swing using keyframe animation. These clouds have a button which makes their
     visibility change to hidden when clicked. -->
     <button type="submit" onclick="cloudClicked()" style="background: transparent;border: none;font-size:0;">
-    <IMG class="cloud" style="min-height: 100px;margin-left: 80%;top: 200%;" srcset="Images\cloud1.png 5000w" alt="cloud1_image ">
-    </button>
+        <IMG class="cloud" style="min-height: 100px;top: 18%;left:-6%;" srcset="Images\cloud1.png 5000w" alt="cloud1_image ">
+        </button>
     <button type="submit" onclick="cloudClicked2()" style="background: transparent;border: none;font-size:0;">
-        <IMG class="cloud" style="min-height: 100px;top: 70%;" srcset="Images\cloud2.png 5000w" alt="cloud2_image ">
-    </button>
+            <IMG class="cloud" style="min-height: 100px;top: 18%;right:3%;" srcset="Images\cloud2.png 5000w" alt="cloud2_image ">
+        </button>
 
-    <!-- NAVIGATION BAR -->
-    <!-- Creates navbar for the top of the site. Each div (with class="subnav") is one element on the navbar,
-    each subdiv under the certain div (class="subnav-content") is the part that shows up when element is hovered over. -->
-    <div class="navbar" id="#nav">
-        <!-- Bomb logo which sends you to top of screen when clicked. Required different class than other
-        elements due to sizing issues. -->
-        <a class="two" href="#">
-            <IMG class="centered " id="navBomb" style="min-width: 40px" srcset="Images\logo_bomb3.png 11000w" alt="bomb_logo_image ">
-        </a>
-        <!-- "Games text which holds subnav content "Dodgy Balloon" & "Underdevelopment" which appears when hovered over.
-        Each subnav text takes you to the respective part of the site when clicked. -->
-        <div class="subnav ">
-            <button class="subnavbtn " style="font-size: clamp(1.5vw, 17px, 1000px);">Games <i class="fa fa-caret-down "></i></button>
-            <div class="subnav-content ">
-                <a class="one" href="#dodgy" style="font-size: clamp(1vw, 12px, 1000px);">Dodgy Balloon</a>
-                <a class="one" href="#dev" style="font-size: clamp(1vw, 12px, 1000px);">Under Development</a>
-            </div>
+
+    <div class="everything" id="all">
+        <!-- BOMB LOGO -->
+        <div style="text-align: center;padding-top:5vw;margin-bottom: 7vw;">
+            <img srcset="Images\logo_bomb_text.png 4000w" alt="bomb_logo_image ">
         </div>
-        <!-- "About text which holds subnav content "About The Developer" which appears when hovered over.
-        The subnav text takes you to the respective part of the site when clicked. -->
-        <div class="subnav ">
-            <button class="subnavbtn " style="font-size: clamp(1.5vw, 17px, 1000px);">About <i class="fa fa-caret-down "></i></button>
-            <div class="subnav-content ">
-                <a class="one" href="#about" style="font-size: clamp(1vw, 12px, 1000px);">About The Developer</a>
-            </div>
-        </div>
-        <!-- "Support text which holds subnav content "Support" which appears when hovered over.
-        The subnav text takes you to the respective part of the site when clicked. -->
-        <div class="subnav ">
-            <button class="subnavbtn " style="font-size: clamp(1.5vw, 17px, 1000px);">Support <i class="fa fa-caret-down "></i></button>
-            <div class="subnav-content ">
-                <a class="one" href="#support" style="font-size: clamp(1vw, 12px, 1000px);">How To Support</a>
-            </div>
-        </div>
-        <!-- "Contact text which holds subnav content "Contact" which appears when hovered over.
-        The subnav text takes you to the respective part of the site when clicked. -->
-        <div class="subnav ">
-            <button class="subnavbtn " style="font-size: clamp(1.5vw, 17px, 1000px);">Contact <i class="fa fa-caret-down "></i></button>
-            <div class="subnav-content ">
-                <a class="one" href="#contact" style="font-size: clamp(1vw, 12px, 1000px);">How To Contact</a>
-            </div>
-        </div>
-    </div>
 
-    <!-- Space div between navbar and bomb logo -->
-    <div style="visibility: hidden;">
-        <IMG class="centered " id="navBomb" style="min-width: 40px" ;<img srcset="Images\logo_bomb3.png 11000w" alt="spacer_image ">
-    </div>
+        <br id="dodgy-balloon">
 
-    <!-- BOMB LOGO -->
-    <div style="text-align: center;">
-        <img srcset="Images\logo_bomb_text.png 4000w" alt="bomb_logo_image ">
-    </div>
-    <br id="dodgy">
 
-    <!-- Small line seperating the segments on the site -->
-    <div style="height:1px;;width:100%;background-color: grey;"></div><br>
-
-    <!-- DODGY SECTION -->
-    <!-- Three images, one showing dodgy balloon picture, another with information, and last google play badge,
-    google play badge is clickable to new tab -->
-    <div class="dodgy-wrapper1">
-        <div class="slides">
+        <div class="parent">
             <div class="container">
-                <img class="square" srcset="Images\dodgyballoon.jpg 1000w" alt="dodgy_image " style="min-width: 350px;">
-                <img class="square" srcset="Images\dodgy_text.jpg 1000w" alt="dodgy_text_image " style="min-width: 350px;">
-            </div>
-
-            <!-- Google play badge with link attached -->
-            <div style="text-align: center;padding-top: 30px;">
-                <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" style="text-decoration: none;text-align: center;">
-                    <img srcset="Images\badge.png 4000w " alt="badge_image " style="min-width: 100px;">
-                </a>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-
-    <!-- Embeded trailer video for Dodgy Balloon -->
-    <div class="dodgy-wrapper2">
-        <div class="slides">
-            <div class="vid_hold">
-                <div>
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://www.youtube.com/embed/aNrN7IzGJ0Q" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></iframe>
-                    </div>
+                <div class="child">
+                    <img srcset="Images\dodgyballoon.jpg 8000w" alt="dodgy_image " style="min-width: 300px;">
+                </div>
+                <div class="child2" style="font-size: calc(10px + .4vw);">
+                    <h1>How far can you get?<br></h1>
+                    <br>
+                    <p>Pop balloons, gain coins, and dodge <br>saws! Can you beat your high score?<br>Download for <b>free</b> and find out!</p>
+                    <br>
+                    <p style="text-align:left;z-index: -1;">
+                        <a href="https://play.google.com/store/apps/details?id=com.bombgames.dodgyballoon" target="_blank">
+                            <img srcset="Images\badge.png 6000w " alt="badge_image " style="min-width: 100px;">
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-    <br id="dev">
 
-    <!-- Small line seperating the segments on the site -->
-    <div style="height:1px;;width:100%;background-color: grey;"></div>
-    <br>
-
-    <!-- UNDER DEVELOPMENT SECTION -->
-    <!-- Two images, under development text and picture underneath -->
-    <div class="dev-wrapper">
-        <div class="slides">
-            <IMG class="centered " <img srcset="Images\under_dev_text.png 1500w " alt="dev_text " style="min-width: 350px;">
-            <IMG class="centered " <img srcset="Images\question.jpg 2000w " alt="question.jpg " style="min-width: 300px;">
-            <br id="about">
-        </div>
-    </div>
-
-    <!-- Small line seperating the segments on the site -->
-    <div style="height:1px;;width:100%;background-color: grey;"></div>
-    <br>
-
-    <!-- ABOUT SECTION -->
-    <!-- Holds two images, One title text and one paragraph text -->
-    <div class="about-wrapper1">
-        <div class="slides">
-            <IMG class="centered " <img srcset="Images\about_dev_text.png 1500w " alt="dev_text_image " style="min-width: 350px;">
-            <IMG class="centered " <img srcset="Images\text_hire.png 1700w " alt="hire_text_image " style="min-width: 300px;">
-        </div>
-    </div>
-    <br>
-
-    <!-- Holds Two clickable images, one LinkedIn image and one Github image -->
-    <div class="about-wrapper2">
-        <div class="slides">
-            <div style="text-align: center;">
-                <a href="https://www.linkedin.com/in/adam-dodson-0373a81b6/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
-                    <img srcset="Images\linked_logo.png 3000w " alt="linked_logo_image " style="display: inline-block;min-width: 150px;">
-                </a>
-                <a href="https://github.com/adamdodson0" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
-                    <img srcset="Images\github_logo.png 3000w " alt="github_logo_image " style="display: inline-block;min-width: 150px;">
-                </a>
+        <div class="vid_hold" style="margin-bottom: 7vw;">
+            <div>
+                <div style="position:relative;padding-top:56.25%;">
+                    <iframe src="https://www.youtube.com/embed/8qoHzrMCVlw" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></iframe>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Small line seperating the segments on the site -->
-    <br id="support">
-    <div style="height:1px;;width:100%;background-color: grey;"></div>
-    <br>
+        <br id="green-connect">
 
-    <!-- SUPPORT SECTION -->
-    <!-- Holds two images, one title text and one support text image -->
-    <div class="support-wrapper1">
-        <div class="slides">
-            <IMG class="centered " <img srcset="Images\support_text.png 1500w " alt="support_title_image " style="min-width: 350px;">
-            <IMG class="centered " <img srcset="Images\text_supp_how.png 2000w " alt="support_text_image " style="min-width: 300px;">
-        </div>
-    </div>
-    <br>
 
-    <!-- Holds four images, All to different social media with clickable links to new tabs. Images in 2 x 2 shape centered -->
-    <div class="support-wrapper2">
-        <div class="slides">
-            <div style="text-align: center;">
-                <a href="https://www.youtube.com/channel/UCBWUrn5nX2lDsAAGeaCddzg" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
-                    <img srcset="Images\youtube_logo.png 3000w " alt="youtube_logo_image " style="display: inline-block;min-width: 150px;">
-                </a>
-                <a href="https://twitter.com/DodgyBalloon" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
-                    <img srcset="Images\twitter_logo.png 3000w " alt="twitter_logo_image " style="display: inline-block;min-width: 150px;">
-                </a>
-                <br>
-                <br>
-                <a href="https://www.facebook.com/Dodgy-Balloon-101919632410554/?ref=pages_you_manage" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
-                    <img srcset="Images\facebook_logo.png 3000w " alt="facebook_logo_image " style="display: inline-block;min-width: 150px;">
-                </a>
-                <a href="https://www.instagram.com/dodgyballoon/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;padding: 1%;">
-                    <img srcset="Images\instagram_logo.png 3000w " alt="instagram_logo_image " style="display: inline-block;min-width: 150px;">
-                </a>
+        <div class="parent">
+            <div class="container">
+                <div class="child" style="font-size: calc(10px + .4vw);">
+                    <h1 style="text-align: right;">Do you have what it takes?<br></h1>
+                    <br>
+                    <p style="text-align: right;">Solve Puzzles! Complete up to ten levels!<br>Each randomly chosen every new playthrough!<br>Download for free!</p>
+                    <br>
+                    <p style="text-align:right;">
+                        <a href="https://play.google.com/store/apps/details?id=com.grid.fun" target="_blank">
+                            <img srcset="Images\badge.png 6000w " alt="badge_image " style="min-width: 100px;">
+                        </a>
+                    </p>
+                </div>
+                <div class="child2">
+                    <img srcset="Images\green_connect.jpg 2000w" alt="dodgy_image " style="min-width: 300px;">
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Small line seperating the segments on the site -->
-    <br id="contact">
-    <div style="height:1px;;width:100%;background-color: grey; "></div>
-    <br>
-
-    <!-- CONTACT SECTION -->
-    <!-- Holds two images, one title image, another image with email text -->
-    <div class="contact-wrapper">
-        <div class="slides">
-            <IMG class="centered " <img srcset="Images\contact_text.png 1500w " alt="contact_title_image " style="min-width: 350px;">
-            <IMG class="centered " <img srcset="Images\contact_me.png 2000w " alt="contact_text_image " style="min-width: 300px;">
+        <div style="text-align: center;margin-bottom:3vw;margin-top:3vw;">
+            <img class="square" srcset="Images\greensquare.gif 500w" alt="dodgy_text_image " style="min-width: 30px;max-width: 150px;">
         </div>
-    </div>
-    <br>
-    <br>
 
-    <!-- Footer of page -->
-    <div class="container_footer" style="overflow: auto; bottom: 0;"></div>
+        <div class="vid_hold2" style="margin-bottom: 10vw;">
+            <div>
+                <div style="position:relative;padding-top:56.25%;">
+                    <iframe src="https://www.youtube.com/embed/AqJvNyLGH1k" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <br id="about-me">
+
+
+        <div style="font-size: calc(10px + .7vw);" class="child3">
+            <h1 style="text-align: center;">About Me<br></h1>
+            <br>
+
+            <div style="text-align: center;">
+                <img style="margin: auto;min-width: 250px;" srcset="Images\photo_myself.png 2000w " alt="badge_image " style="min-width: 100px;">
+            </div>
+
+            <br>
+            <p style="text-align: center;">All of this site and its applications have <br>been fully developed by me, Adam <br> Dodson. A recent UW Parkside graduate <br> seeking a career in Developement. <br> I am extremely passionate and would love <br>to begin my career
+                working with you!<br>If you are interested in hiring me I strongly <br> advise you view my LinkedIn & Github as <br> well as emailing me for my resume. <br>Thank you!</p>
+            <br>
+        </div>
+
+
+
+
+
+        <div style="margin-top: 10vw;font-size: calc(5px + 1.4vw);" class="child3">
+            <h1 style="text-align: center;">Contact Me<br></h1>
+        </div>
+
+
+
+
+        <form style="width: 80%;max-width: 450px;" action="https://formspree.io/f/meqdjvvq" method="POST">
+            <input name="name" type="text" class="feedback-input" placeholder="Name" />
+            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+            <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+            <input type="submit" value="SUBMIT" />
+        </form>
+
+
+
+
+
+
+        <br id="contact-me">
+
+    </div>
+
+
+
+
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="social-wrapper">
+            <ul>
+                <li>
+                    <a href="https://github.com/adamdodson0" target="_blank">
+                        <img src="Images\blue_github.png" alt="Twitter Logo" class="twitter-icon"></a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/adam-dodson001" target="_blank">
+                        <img src="Images\blue_linked.png" alt="Instagram Logo" class="instagram-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCBWUrn5nX2lDsAAGeaCddzg" target="_blank">
+                        <img src="Images\blue_youtube.png" alt="Linkedin Logo" class="linkedin-icon"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/DodgyBalloon" target="_blank">
+                        <img src="Images\blue_twitter.png" alt="Facebook Logo" class="facebook-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/Dodgy-Balloon-101919632410554/?ref=pages_you_manage" target="_blank">
+                        <img src="Images\blue_facebook.png" alt="Googleplus Logo" class="googleplus-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/dodgyballoon/" target="_blank">
+                        <img src="Images\blue_instagram.png" alt="Youtube Logo" class="youtube-icon"></a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="footer-nav" role="navigation">
+        </nav>
+    </footer>
+
 </body>
 
-<!-- Javascript for listening events on site. Listening events include scrolling behavior
-as well as clicks and position on page. -->
 <script>
     // Hides cloud off screen when clicked
     function cloudClicked() {
-        document.getElementsByClassName("cloud")[0].style.top = -100;
+        document.getElementsByClassName("cloud")[0].style.top = -1000;
     }
 
     // Hides cloud off screen when clicked
     function cloudClicked2() {
-        document.getElementsByClassName("cloud")[1].style.top = -100;
+        document.getElementsByClassName("cloud")[1].style.top = -1000;
     }
-
-    var lastScrollTop; // Stores the top position
-
-    // Gets the navbar
-    navbar = document.getElementsByClassName('navbar');
-
-    // Detects scrolling and based on scrolling up or down will hide the navbar and transition the nav bar on screen
-    //  Will be called on every scroll
-    window.addEventListener('scroll', function() {
-
-        // Gets the location on scroll
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Hides navbar if scroll direction is down and user is not at top of page
-        // Else will reveal navbar
-        if (scrollTop > lastScrollTop && !window.scrollY == 0) { //if it will be greater than the previous
-            document.getElementsByClassName("navbar")[0].style.top = -(document.getElementById("navBomb").height * 2) - 5;;
-        } else {
-            document.getElementsByClassName("navbar")[0].style.top = "0px ";
-        }
-
-        // Stores new position
-        lastScrollTop = scrollTop;
-    });
-
-    // Configures the range of the trigger for the slide animations for the images in view
-    let options = {
-        root: document.querySelector('#scrollArea'),
-        rootMargin: '0px',
-        threshold: .25
-    }
-
-    // Loads the pages images first, then listens for animation slides to be in view
-    window.addEventListener("load", (event) => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const square = entry.target.querySelector('.slides');
-
-                // If in view, perform entry animation for images
-                if (entry.isIntersecting) {
-                    square.classList.add('slides_active');
-                    return; // if we added the class, exit the function
-                }
-
-                // When taken out of view, remove animation
-                square.classList.remove('slides_active');
-            });
-        }, options);
-
-        // Individual calls for each animation to occur to each div
-        observer.observe(document.querySelector('.dodgy-wrapper1'));
-        observer.observe(document.querySelector('.dodgy-wrapper2'));
-        observer.observe(document.querySelector('.dev-wrapper'));
-        observer.observe(document.querySelector('.about-wrapper1'));
-        observer.observe(document.querySelector('.about-wrapper2'));
-        observer.observe(document.querySelector('.support-wrapper1'));
-        observer.observe(document.querySelector('.support-wrapper2'));
-        observer.observe(document.querySelector('.contact-wrapper'));
-    }, false);
 </script>
+
+</html>
